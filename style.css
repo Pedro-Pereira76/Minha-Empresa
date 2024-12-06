@@ -1,0 +1,166 @@
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    animation: fadeIn 1s ease-out; /* Animação de fade-in para o corpo */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    animation: slideInTop 1s ease-out; /* Animação para o cabeçalho */
+}
+
+header #logo img {
+    width: 100px;
+    height: auto;
+    animation: bounceIn 1s ease-out; /* Animação de 'bounce' no logo */
+}
+
+/* Menu de navegação */
+nav {
+    background-color: #222;
+    text-align: center;
+    padding: 10px 0;
+    animation: slideInTop 1.2s ease-out; /* Animação para o menu */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+/* Botões 3D com animação */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease-out; /* Animação dos links do menu */
+}
+
+/* Efeito 3D ao passar o mouse */
+nav ul li a:hover {
+    background-color: #45a049;
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Seção do discurso com animação de fade-in */
+#discurso {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out; /* Fade-in para o conteúdo */
+}
+
+h1, h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards; /* Fade-in com animação de subida */
+}
+
+h2 {
+    font-size: 28px;
+    color: #444;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Animação do texto */
+p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeInUp 2s forwards; /* Animação de fade-in para os parágrafos */
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    animation: slideInBottom 1s ease-out; /* Animação para o rodapé */
+}
+
+/* Animações para o texto */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

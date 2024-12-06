@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucros</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="logo.png" alt="P.B Informática">
+        </div>
+        <h1>Gráficos de Lucros</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="agendamento.html">Agendamento</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="lucros.html">Lucros</a></li>
+        </ul>
+    </nav>
+
+    <section id="grafico">
+        <h2>Lucros Mensais e Anuais</h2>
+        <canvas id="graficoLucros"></canvas>
+        <script>
+            var ctx = document.getElementById('graficoLucros').getContext('2d');
+            var graficoLucros = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                    datasets: [{
+                        label: 'Lucro Mensal (R$)',
+                        data: [1500, 2000, 2500, 2200, 2800, 3200, 3500, 3300, 3100, 3800, 4200, 4500],
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        fill: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+    </section>
+</body>
+</html>
